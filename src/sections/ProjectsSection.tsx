@@ -214,8 +214,8 @@ const ProjectCard = ({ project, index, totalCards }: { project: ProjectData; ind
 
         {/* Image grid */}
         <div className="flex-1 flex gap-3 sm:gap-4 md:gap-6 min-h-0">
-          {/* Left column - 40% */}
-          <div className="w-[40%] flex flex-col gap-3 sm:gap-4 md:gap-6">
+          {/* Left column - 40% (hidden on mobile) */}
+          <div className="hidden sm:flex w-[40%] flex-col gap-3 sm:gap-4 md:gap-6">
             <div className="overflow-hidden rounded-[25px] sm:rounded-[40px] md:rounded-[45px]" style={{ height: 'clamp(110px, 14vw, 200px)' }}>
               <img
                 src={project.images.col1Top}
@@ -233,8 +233,8 @@ const ProjectCard = ({ project, index, totalCards }: { project: ProjectData; ind
               />
             </div>
           </div>
-          {/* Right column - 60% */}
-          <div className="w-[60%] overflow-hidden rounded-[25px] sm:rounded-[40px] md:rounded-[45px]">
+          {/* Right column - 60% on desktop, full-width on mobile */}
+          <div className="w-full sm:w-[60%] overflow-hidden rounded-[25px] sm:rounded-[40px] md:rounded-[45px]">
             <img
               src={project.images.col2}
               alt={`${project.name} preview 3`}
