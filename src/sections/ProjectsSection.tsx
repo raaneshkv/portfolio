@@ -44,7 +44,6 @@ const projects: ProjectData[] = [
     num: '02',
     category: 'AI Guidance Product',
     name: 'CareerPilot AI',
-    link: 'https://careerpilot-orcin.vercel.app',
     images: imageSets[1],
   },
   {
